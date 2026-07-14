@@ -1,0 +1,53 @@
+[33mcommit 12ae86d8baf38d3d6e29eb9911113a10d14f4463[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: mohamedfrontenddev-byte <mohamed.frontend.dev@gmail.com>
+Date:   Tue Jul 14 01:47:11 2026 +0300
+
+    inti
+
+ .gitignore                                         |    41 [32m+[m
+ README.md                                          |    36 [32m+[m
+ components.json                                    |    25 [32m+[m
+ dist/dev/build-manifest.json                       |    26 [32m+[m
+ dist/dev/build/672fb56e729ff64f.js                 |     6 [32m+[m
+ dist/dev/build/672fb56e729ff64f.js.map             |     5 [32m+[m
+ dist/dev/build/chunks/1wzv_0l6g3d2._.js            |  7125 [32m+++++++[m
+ dist/dev/build/chunks/1wzv_0l6g3d2._.js.map        |    47 [32m+[m
+ .../chunks/[root-of-the-server]__02j2jby._.js      |   508 [32m+[m
+ .../chunks/[root-of-the-server]__02j2jby._.js.map  |    11 [32m+[m
+ .../chunks/[root-of-the-server]__1lha4hp._.js      |   206 [32m+[m
+ .../chunks/[root-of-the-server]__1lha4hp._.js.map  |     8 [32m+[m
+ ...bopack-node]_transforms_postcss_ts_10m-isa._.js |    13 [32m+[m
+ ...ck-node]_transforms_postcss_ts_10m-isa._.js.map |     5 [32m+[m
+ dist/dev/build/chunks/[turbopack]_runtime.js       |  1739 [32m++[m
+ dist/dev/build/chunks/[turbopack]_runtime.js.map   |    14 [32m+[m
+ dist/dev/build/package.json                        |     1 [32m+[m
+ dist/dev/cache/.rscinfo                            |     1 [32m+[m
+ dist/dev/cache/next-devtools-config.json           |     1 [32m+[m
+ dist/dev/cache/turbopack/v16.2.10/00000003.sst     |   Bin [31m0[m -> [32m52[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000004.sst     |   Bin [31m0[m -> [32m6621[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000005.meta    |   Bin [31m0[m -> [32m674[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000008.meta    |   Bin [31m0[m -> [32m1773[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000011.sst     |   Bin [31m0[m -> [32m52[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000012.sst     |   Bin [31m0[m -> [32m10237[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000013.meta    |   Bin [31m0[m -> [32m674[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000016.meta    |   Bin [31m0[m -> [32m1773[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000019.sst     |   Bin [31m0[m -> [32m52[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000020.sst     |   Bin [31m0[m -> [32m1665749[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000021.meta    |   Bin [31m0[m -> [32m674[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000024.meta    |   Bin [31m0[m -> [32m299617[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000030.sst     |   Bin [31m0[m -> [32m52[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000031.sst     |   Bin [31m0[m -> [32m749881[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000032.meta    |   Bin [31m0[m -> [32m674[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000034.meta    |   Bin [31m0[m -> [32m75359[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000041.sst     |   Bin [31m0[m -> [32m52[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000042.sst     |   Bin [31m0[m -> [32m11797[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000043.meta    |   Bin [31m0[m -> [32m674[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000045.meta    |   Bin [31m0[m -> [32m2941[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000049.del     |   Bin [31m0[m -> [32m64[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000055.sst     |   Bin [31m0[m -> [32m52[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000056.sst     |   Bin [31m0[m -> [32m650693[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000057.meta    |   Bin [31m0[m -> [32m674[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000060.meta    |   Bin [31m0[m -> [32m75359[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000066.sst     |   Bin [31m0[m -> [32m52[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000067.sst     |   Bin [31m0[m -> [32m547205[m bytes
+ dist/dev/cache/turbopack/v16.2.10/00000069.meta    
