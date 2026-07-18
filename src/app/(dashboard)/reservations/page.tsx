@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import {
@@ -23,6 +22,7 @@ import { SearchInput } from "@/components/shared/search-input";
 import { FormField } from "@/components/shared/form-field";
 import { FormSelect } from "@/components/shared/form-select";
 import { ConfirmDialog } from "@/components/shared/confirm-dialog";
+import { formResolver } from "@/components/shared/zod-resolver";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -74,7 +74,7 @@ export default function ReservationsPage() {
   const [deleteId, setDeleteId] = useState<string | null>(null);
 
   const form = useForm<ReservationFormValues>({
-    resolver: zodResolver(reservationSchema),
+    resolver: formResolver<ReservationFormValues>(reservationSchema),
     defaultValues: {
       customerName: "",
       phone: "",

@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import {
@@ -21,6 +20,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import { StatusBadge } from "@/components/shared/status-badge";
 import { FormSelect } from "@/components/shared/form-select";
 import { ConfirmDialog } from "@/components/shared/confirm-dialog";
+import { formResolver } from "@/components/shared/zod-resolver";
 import {
   Card,
   CardContent,
@@ -79,7 +79,7 @@ export default function OrdersPage() {
   const [draftItems, setDraftItems] = useState<DraftItem[]>([]);
 
   const form = useForm<OrderFormValues>({
-    resolver: zodResolver(orderSchema),
+    resolver: formResolver<OrderFormValues>(orderSchema),
     defaultValues: {
       tableId: "",
       discount: 0,

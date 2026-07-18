@@ -21,6 +21,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import { SearchInput } from "@/components/shared/search-input";
 import { FormField } from "@/components/shared/form-field";
 import { ConfirmDialog } from "@/components/shared/confirm-dialog";
+import { formResolver } from "@/components/shared/zod-resolver";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -69,7 +70,7 @@ export default function InventoryPage() {
   const [deleteId, setDeleteId] = useState<string | null>(null);
 
   const form = useForm<InventoryFormValues>({
-    resolver: zodResolver(inventorySchema),
+    resolver: formResolver<InventoryFormValues>(inventorySchema),
     defaultValues: {
       name: "",
       quantity: 0,

@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import {
@@ -30,6 +29,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
+import { formResolver } from "@/components/shared/zod-resolver";
 
 const settingsSchema = z.object({
   name: z.string().min(2, "Restaurant name is required"),
@@ -62,7 +62,7 @@ export default function SettingsPage() {
   const { tables } = useTables();
 
   const form = useForm<SettingsFormValues>({
-    resolver: zodResolver(settingsSchema),
+    resolver: formResolver<SettingsFormValues>(settingsSchema),
     defaultValues: {
       name: "",
       address: "",
